@@ -1,0 +1,2839 @@
+{
+  "gameSystem": {
+    "name": "The Carniverse",
+    "id": "263f-3dfe-cc62-40d4",
+    "battleScribeVersion": 2.03,
+    "revision": 1,
+    "type": "gameSystem",
+    "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
+    "categoryEntries": [
+      {"name": "Neutral", "id": "2ac8-892e-953a-b2dc", "hidden": false, "publicationId": "beb1-426f-c267-66e9"},
+      {"name": "Military", "id": "5f7a-9622-1446-228e", "hidden": false, "publicationId": "beb1-426f-c267-66e9"},
+      {"name": "Science", "id": "603b-943f-9587-c165", "hidden": false, "publicationId": "beb1-426f-c267-66e9"}
+    ],
+    "costTypes": [{"name": "Resource Point (RP)", "id": "f896-ab60-0ff9-886f", "defaultCostLimit": -1}],
+    "forceEntries": [
+      {
+        "name": "Survivors",
+        "id": "67a9-d118-cbbd-0a30",
+        "hidden": false,
+        "publicationId": "beb1-426f-c267-66e9",
+        "categoryLinks": [
+          {
+            "name": "Military",
+            "id": "52e3-5b75-3045-bbae",
+            "hidden": false,
+            "primary": false,
+            "targetId": "5f7a-9622-1446-228e",
+            "constraints": [
+              {
+                "id": "ea84-b01a-83a2-0dad",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "max",
+                "value": 50
+              }
+            ]
+          },
+          {"name": "Neutral", "id": "b51f-fdce-ba7f-7d80", "hidden": false, "primary": false, "targetId": "2ac8-892e-953a-b2dc"},
+          {
+            "name": "Science",
+            "id": "f875-2712-2031-ca11",
+            "hidden": false,
+            "primary": false,
+            "targetId": "603b-943f-9587-c165",
+            "constraints": [
+              {
+                "id": "46fc-e0aa-8f86-96d2",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "max",
+                "value": 50
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "profileTypes": [
+      {
+        "name": "Character",
+        "id": "2811-6db4-610c-c15b",
+        "characteristicTypes": [
+          {"name": "AP", "id": "ac1f-b12d-4cfb-8e0d"},
+          {"name": "S", "id": "c461-c8e9-e4a5-e089"},
+          {"name": "M", "id": "522c-1090-e379-243f"},
+          {"name": "STR", "id": "d140-7673-cf5f-d2fe"},
+          {"name": "DEX", "id": "de64-c2e9-b4c0-2c0d"},
+          {"name": "INT", "id": "b4bc-fadb-804f-38f0"},
+          {"name": "CON", "id": "8c42-9869-b037-dccf"},
+          {"name": "HP", "id": "3e25-1da5-6637-f3af"},
+          {"name": "BR", "id": "f620-ac41-03cb-f84d"},
+          {"name": "L", "id": "9332-967a-e5b8-aa34"},
+          {"name": "Special SKills", "id": "25dd-2359-8cc7-5c98"}
+        ]
+      },
+      {
+        "name": "Range Weapon",
+        "id": "4f9b-2f46-4ae4-00ca",
+        "characteristicTypes": [
+          {"name": "Type", "id": "255b-ab91-2e13-6840"},
+          {"name": "Range", "id": "3f79-d8e0-6a69-592a"},
+          {"name": "DMG", "id": "5b51-1afc-813e-d0cc"},
+          {"name": "FR", "id": "0723-6d4f-2abd-8f80"},
+          {"name": "Push", "id": "4f48-5f9a-efe0-deaa"},
+          {"name": "Clip Size", "id": "fd5c-7fde-0a07-703c"},
+          {"name": "Special Rules", "id": "45a7-a97e-a321-7cf9"}
+        ]
+      },
+      {
+        "name": "Melee Weapon",
+        "id": "76f9-a873-d9ad-91a0",
+        "characteristicTypes": [
+          {"name": "Speed", "id": "8329-5a6d-df7f-2ed8"},
+          {"name": "Melee Modifier", "id": "c566-2cec-54c2-d36b"},
+          {"name": "STR Modifier", "id": "ed31-cf53-531e-c727"},
+          {"name": "Special Rules", "id": "339b-c877-eac1-0619"}
+        ]
+      }
+    ],
+    "publications": [{"name": "the Carniverse RuleBook", "id": "beb1-426f-c267-66e9"}],
+    "selectionEntries": [
+      {
+        "name": "Leader - The Veteran",
+        "id": "27a2-e402-a665-c47b",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 20,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "categoryLinks": [{"name": "New CategoryLink", "id": "79fc-0f9f-0748-0d7a", "hidden": false, "primary": true, "targetId": "5f7a-9622-1446-228e"}],
+        "constraints": [
+          {
+            "id": "1456-65f9-7afc-6bf3",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 20}],
+        "entryLinks": [
+          {
+            "name": "Weapons (Max 3 Total)",
+            "id": "d5fc-9b01-41dd-4f03",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "10f2-3606-13fd-b9b5",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Gear (no Selection limit)",
+            "id": "1da6-a27e-9aeb-9208",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "b701-bdd2-ff19-b596",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "rank and FiLe", "id": "c74c-c458-5319-33cb", "hidden": false, "targetId": "1d52-9976-8525-e63b", "type": "rule"},
+          {"name": "Leader", "id": "0ff3-c00d-5cc7-752a", "hidden": false, "targetId": "b987-4e8a-afbd-ff20", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "ba5e-8afb-abd8-a733",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "equalTo",
+                    "value": 1
+                  },
+                  {
+                    "childId": "6c97-dcc1-f267-fbef",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "equalTo",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "The Veteran",
+            "id": "18ee-7bf0-d4ed-360e",
+            "hidden": false,
+            "typeId": "2811-6db4-610c-c15b",
+            "typeName": "Character",
+            "characteristics": [
+              {"name": "AP", "$text": "6", "typeId": "ac1f-b12d-4cfb-8e0d"},
+              {"name": "S", "$text": "4", "typeId": "c461-c8e9-e4a5-e089"},
+              {"name": "M", "$text": "3", "typeId": "522c-1090-e379-243f"},
+              {"name": "STR", "$text": "3", "typeId": "d140-7673-cf5f-d2fe"},
+              {"name": "DEX", "$text": "3", "typeId": "de64-c2e9-b4c0-2c0d"},
+              {"name": "INT", "$text": "3", "typeId": "b4bc-fadb-804f-38f0"},
+              {"name": "CON", "$text": "4", "typeId": "8c42-9869-b037-dccf"},
+              {"name": "HP", "$text": "4", "typeId": "3e25-1da5-6637-f3af"},
+              {"name": "BR", "$text": "4", "typeId": "f620-ac41-03cb-f84d"},
+              {"name": "L", "$text": "4", "typeId": "9332-967a-e5b8-aa34"},
+              {"name": "Special SKills", "$text": "Rank and File, Leader", "typeId": "25dd-2359-8cc7-5c98"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "ZA - Skills acquired during Campaign",
+            "id": "9cab-2754-3bb8-b24d",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "entryLinks": [
+              {
+                "name": "Firearms Skill",
+                "id": "2a6d-fcd8-7c92-7f76",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "3d21-f7ed-48e8-11f4",
+                "type": "selectionEntryGroup"
+              },
+              {
+                "name": "Leadership Skill",
+                "id": "c9ce-e146-fcfa-3825",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "e420-2351-843e-bfc4",
+                "type": "selectionEntryGroup"
+              },
+              {
+                "name": "Physical Skill",
+                "id": "2f2a-5a9a-7cc5-ad82",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "2370-2a83-411a-9079",
+                "type": "selectionEntryGroup"
+              },
+              {
+                "name": "Melee Skill",
+                "id": "3688-96da-c0f5-f99b",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "28d6-4de5-552b-489f",
+                "type": "selectionEntryGroup"
+              },
+              {
+                "name": "Mental Skill",
+                "id": "db4d-40a9-bea6-3972",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "a54e-170c-40ec-e4fe",
+                "type": "selectionEntryGroup"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Leader - The DOC",
+        "id": "ba5e-8afb-abd8-a733",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 21,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "categoryLinks": [{"name": "New CategoryLink", "id": "c055-b33f-65e6-766e", "hidden": false, "primary": true, "targetId": "603b-943f-9587-c165"}],
+        "constraints": [
+          {
+            "id": "67ef-965e-9d6c-fe68",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 16}],
+        "entryLinks": [
+          {
+            "name": "Weapons (Max 3 Total)",
+            "id": "4f9b-7547-bfaa-5129",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "10f2-3606-13fd-b9b5",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Gear (no Selection limit)",
+            "id": "df15-ecc1-defe-e7d8",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "b701-bdd2-ff19-b596",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Leader", "id": "e9fd-f26e-e62d-e4ff", "hidden": false, "targetId": "b987-4e8a-afbd-ff20", "type": "rule"},
+          {"name": "First aid", "id": "f9e1-c823-3727-96c9", "hidden": false, "targetId": "5be3-3023-0088-8f17", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "6c97-dcc1-f267-fbef",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "equalTo",
+                    "value": 1
+                  },
+                  {
+                    "childId": "27a2-e402-a665-c47b",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "equalTo",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "The DOC",
+            "id": "b703-d2c9-3483-018f",
+            "hidden": false,
+            "typeId": "2811-6db4-610c-c15b",
+            "typeName": "Character",
+            "characteristics": [
+              {"name": "AP", "$text": "6", "typeId": "ac1f-b12d-4cfb-8e0d"},
+              {"name": "S", "$text": "2", "typeId": "c461-c8e9-e4a5-e089"},
+              {"name": "M", "$text": "2", "typeId": "522c-1090-e379-243f"},
+              {"name": "STR", "$text": "2", "typeId": "d140-7673-cf5f-d2fe"},
+              {"name": "DEX", "$text": "3", "typeId": "de64-c2e9-b4c0-2c0d"},
+              {"name": "INT", "$text": "4", "typeId": "b4bc-fadb-804f-38f0"},
+              {"name": "CON", "$text": "3", "typeId": "8c42-9869-b037-dccf"},
+              {"name": "HP", "$text": "4", "typeId": "3e25-1da5-6637-f3af"},
+              {"name": "BR", "$text": "3", "typeId": "f620-ac41-03cb-f84d"},
+              {"name": "L", "$text": "4", "typeId": "9332-967a-e5b8-aa34"},
+              {"name": "Special SKills", "$text": "First Aid, Leader", "typeId": "25dd-2359-8cc7-5c98"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "ZA - Skills acquired during Campaign",
+            "id": "651f-1808-40d3-4988",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "entryLinks": [
+              {
+                "name": "Firearms Skill",
+                "id": "4894-9563-6ee2-b1ab",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "3d21-f7ed-48e8-11f4",
+                "type": "selectionEntryGroup"
+              },
+              {
+                "name": "Leadership Skill",
+                "id": "9c40-de3c-b26f-ca3e",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "e420-2351-843e-bfc4",
+                "type": "selectionEntryGroup"
+              },
+              {
+                "name": "Mental Skill",
+                "id": "fb83-dd58-5a91-2cec",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "a54e-170c-40ec-e4fe",
+                "type": "selectionEntryGroup"
+              },
+              {
+                "name": "Physical Skill",
+                "id": "1ee0-4e30-5f83-6dae",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "2370-2a83-411a-9079",
+                "type": "selectionEntryGroup"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Leader - The Survival Nut",
+        "id": "6c97-dcc1-f267-fbef",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 21,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "categoryLinks": [{"name": "New CategoryLink", "id": "f26e-b537-aad5-1375", "hidden": false, "primary": true, "targetId": "2ac8-892e-953a-b2dc"}],
+        "constraints": [
+          {
+            "id": "be2e-2367-48e7-c70a",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 14}],
+        "entryLinks": [
+          {
+            "name": "Gear (no Selection limit)",
+            "id": "5d5c-606d-3f90-4548",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "b701-bdd2-ff19-b596",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Weapons (Max 3 Total)",
+            "id": "92ae-a711-72a2-617f",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "10f2-3606-13fd-b9b5",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Leader", "id": "968f-a194-bc56-1333", "hidden": false, "targetId": "b987-4e8a-afbd-ff20", "type": "rule"},
+          {"name": "resourCeFuL", "id": "05a0-ee18-4a0b-9101", "hidden": false, "targetId": "5faa-bfcf-06cb-47cf", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "ba5e-8afb-abd8-a733",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "equalTo",
+                    "value": 1
+                  },
+                  {
+                    "childId": "27a2-e402-a665-c47b",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "equalTo",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "The Survival Nut",
+            "id": "621b-eaee-bbb9-7122",
+            "hidden": false,
+            "page": 21,
+            "publicationId": "beb1-426f-c267-66e9",
+            "typeId": "2811-6db4-610c-c15b",
+            "typeName": "Character",
+            "characteristics": [
+              {"name": "AP", "$text": "6", "typeId": "ac1f-b12d-4cfb-8e0d"},
+              {"name": "S", "$text": "3", "typeId": "c461-c8e9-e4a5-e089"},
+              {"name": "M", "$text": "3", "typeId": "522c-1090-e379-243f"},
+              {"name": "STR", "$text": "3", "typeId": "d140-7673-cf5f-d2fe"},
+              {"name": "DEX", "$text": "3", "typeId": "de64-c2e9-b4c0-2c0d"},
+              {"name": "INT", "$text": "3", "typeId": "b4bc-fadb-804f-38f0"},
+              {"name": "CON", "$text": "3", "typeId": "8c42-9869-b037-dccf"},
+              {"name": "HP", "$text": "4", "typeId": "3e25-1da5-6637-f3af"},
+              {"name": "BR", "$text": "3", "typeId": "f620-ac41-03cb-f84d"},
+              {"name": "L", "$text": "4", "typeId": "9332-967a-e5b8-aa34"},
+              {"name": "Special SKills", "$text": "Leader, Resourceful", "typeId": "25dd-2359-8cc7-5c98"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "ZA - Skills acquired during Campaign",
+            "id": "5551-d4ee-45b2-92aa",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "entryLinks": [
+              {
+                "name": "Firearms Skill",
+                "id": "1974-c5e1-861d-a5b5",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "3d21-f7ed-48e8-11f4",
+                "type": "selectionEntryGroup"
+              },
+              {
+                "name": "Leadership Skill",
+                "id": "f480-b1f2-aa8d-8884",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "e420-2351-843e-bfc4",
+                "type": "selectionEntryGroup"
+              },
+              {
+                "name": "Physical Skill",
+                "id": "ad73-8dc3-ab1d-9608",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "2370-2a83-411a-9079",
+                "type": "selectionEntryGroup"
+              },
+              {
+                "name": "Melee Skill",
+                "id": "3957-5450-2d6f-6d68",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "targetId": "28d6-4de5-552b-489f",
+                "type": "selectionEntryGroup"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sharedRules": [
+      {
+        "name": "aCrobatiC",
+        "id": "1da7-4da6-0297-99b1",
+        "description": "this Character can jump and leap their way across the battlefield. They treat any obstacle 1” or lower as open terrain and may cross it using the Standard Movement Action.They must end their move in a legal position with their base free and clear of the obstacle",
+        "hidden": false,
+        "page": 40,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "agriCuLture",
+        "id": "8847-324b-5030-febd",
+        "description": "this Character has a real skill for the cultivation and preservation of plant-based foods. The Team will see an increase in its food stores if this Character is involved in the process. If this Character is sent to work in the Hydroponics Lab of a Base, they may roll 2D6 to see how many Resource Points they create instead of just 1D6, keeping the highest.",
+        "hidden": false,
+        "page": 40,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "big game hunter",
+        "id": "1ee9-d0b8-be90-75d0",
+        "description": "this Character absolutely loves to take down Dinos. Put a half decent firearm in their hands and point them towards the closest predator to see the kind of damage they can do. Any ranged attacks made by this Character against a Dinosaur model have a bonus of +1 to the attack roll, and Damage.",
+        "hidden": false,
+        "page": 40,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "bred For ConFLiCt",
+        "id": "eb32-3083-2cb2-e066",
+        "description": "this Character is always planning for the worst and can often see how a conflict will play out well in advance. If they are targeted by an enemy Character with an Overwatch Token, those two Characters make an opposed Intelligence or Dexterity Test (this Character’s choice). If the Character with this skill wins, the Overwatch is discarded, but the Shooting Character still receives an Ammo and Detection Tokens for the firearm they were using. If they lose the Test, resolve the Overwatch Token as normal.",
+        "hidden": false,
+        "page": 40,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "Cheap shot",
+        "id": "09c3-66b1-51d3-525c",
+        "description": "this Character will bend to any low they need to in order to survive, using any advantage that they can. In the case of a tie during an opposed Melee Test involving this model and another Human model, this model is considered the winner and causes 1 HP worth of damage, even if they were defending.",
+        "hidden": false,
+        "page": 40,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "ConvinCing",
+        "id": "a2a3-4d0a-9b0a-c7f5",
+        "description": "there’s just something about the way this Character talks, other people are drawn to them. When this Character attempts to Recruit a new member to their Team, they can take -2 RP off the cost of the model they are Recruiting. Also, if this Character replaces a Leader that has just died, you do not have to roll to see if any other Team members disband. They will instead choose to rally behind this new Leader (see Death of a Leader on Page 99).",
+        "hidden": false,
+        "page": 40,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "ConstruCtion",
+        "id": "6d2b-4c98-eb4f-7a07",
+        "description": "knowing how to build and maintain things with very limited resources is a widely coveted skill. When this Character is assigned to build a new Base Facility, this model reduces the cost by 5 RP. You can also assign them to a Facility to run diagnostics during the Assigning Jobs step between games, which will reduce that Facilities RP Upkeep by -2 for the next post game steps.",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "Covering Fire",
+        "id": "ff60-e46e-bc9d-c214",
+        "description": "if a friendly model is targeted during the Shooting Phase by an enemy model that is within this Character’s firing range, this Character may gain Ammo and Detection tokens as if they had fired their weapon a single time to impose a -1 penalty to the Shooting roll of the enemy model. This may be done once per Shooting Phase.",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "Crowd ControL",
+        "id": "e307-0474-e6ac-38ff",
+        "description": "this Character can use their enemies’ advantages against them, ignoring the Melee penalty for being in Base Contact with multiple enemies.",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "Fast Loader",
+        "id": "b5cc-b018-d0c5-47ed",
+        "description": "this Character can take the Reload a Weapon Action for one less AP that normal (1).",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "First aid",
+        "id": "5be3-3023-0088-8f17",
+        "description": "if this Character was not removed from play the previous game, you may reroll dice rolled on the Injury Table in the Campaign section. The second die roll must stand and cannot be re-rolled again. This skill is Single-Use between games.",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "inspiring",
+        "id": "8f89-42b1-8401-90be",
+        "description": "Iif this model is still on the board during any End Phase, your Team gains +1 to its total Morale on top of your Leadership rating and number of remaining models.",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "Lead by exampLe",
+        "id": "4a58-a574-596a-ead6",
+        "description": "everyone near this Character feels inspired to fight a little harder, against any odds. If this model is in Base Contact with the same enemy as a friendly Character, that Character may add +1 to their Melee Attribute. The model with this skill does not gain the bonus themselves, but may gain it from another Character with the same skill",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "Leader",
+        "id": "b987-4e8a-afbd-ff20",
+        "description": "friendly models within 8” of a model with this skill may add +1 to their Bravery for any Tests they need to make against another model’s Terror value.",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "martiaL artist",
+        "id": "9a27-0461-2833-52db",
+        "description": "this Character has studied at least one form of martial arts. As long as this Character is not equipped with a Melee weapon, they gain a +1 modifier to any Melee rolls against Human enemies in the Melee Phase.",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "QuiCkened reFLexes",
+        "id": "18a2-7286-6691-bc14",
+        "description": "this Character can make their body move just that little bit faster to give themselves an edge. During any Melee Phase with a combat involving this model, for the purposes of Attack order, this model gains a +1 modifier to its Dexterity Attribute.",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "rank and FiLe",
+        "id": "1d52-9976-8525-e63b",
+        "description": "this Character has a talent for battlefield tactics. If this model is the Team’s Leader, they may roll two dice for Initiative, keeping which ever one they wish. If they are\nnot the Leader, this can only be done if they are within 2” of the Leader when the roll is made.\nOnly one such use of Rank and File can be active for any roll you make.",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "researCher",
+        "id": "712e-9f3c-f540-090f",
+        "description": "a Character with this skill is able to analyze information in such a way that they see a little more than most people do. When this Character removes a Dinosaur model from play, their Team gains an additional +1 Intel Point. If this Character is assigned to work in a Research Facility, they increase the amount of Intel Points generated by +1D3",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "resourCeFuL",
+        "id": "5faa-bfcf-06cb-47cf",
+        "description": "when a Character with this skill carries a Resource Token off the board, their Team gets an additional +2 Resource Points. They also reduce the Rarity of Weapons and Gear, allowing you to purchase an additional rarity 1 item (for this Character only) at Character creation.",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "sniper",
+        "id": "981d-e351-94d3-f1ad",
+        "description": "this Character is adept at picking out the best placement for their bullets. Each\ntime this Character makes a ranged attack, and rolls a 6 on the die, that Attack has its Damage\nresolved as if its Strength was 1 higher.",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "sprint",
+        "id": "9f9e-473b-025d-5b8b",
+        "description": "in most footraces this Character typically is the victor. Each time they take the Dash Action, they may spend AP as if their DEX was 1 point higher than it actually is.",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "steaLthy",
+        "id": "5694-933f-e693-ccaf",
+        "description": "This Character no longer generates Detection Tokens when they take the Dash Action.",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "stun",
+        "id": "0146-9c63-2165-b857",
+        "description": "this Character is adept at striking sensitive parts of the body in Melee combat. Each time this Character rolls for a Melee Attack and gets a 6 on the die, resolve any Damage for that attack as if it was at a Strength of 1 higher than normal.",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "untrustworthy",
+        "id": "231f-4e01-f6cb-6b72",
+        "description": "because of this Character’s past, nobody is willing to follow them. This Character can never be named as a Leader. Should a Team find themselves in a situation when their only remaining living Team members have this trait, then the Team disbands immediately. Should this happen during a Scenario, then the Team is considered to instantly fail a Morale Roll (the other Team still needs to pass their Morale if required for the victory).",
+        "hidden": false,
+        "page": 43,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "waLL oF buLLets",
+        "id": "eef0-920d-a6c9-540c",
+        "description": "this Character prefers to keep their enemies at a distance. When an enemy model is moving into Base Contact with this Character, assuming they are not already in Base Contact with another enemy model, they may make a Shooting attack against the incoming enemy using the full Firing Rate of a single firearm. These attacks will only hit on a roll of 6 on 1D6, no modifiers are made to the roll. If the attack hits, then resolve damage as normal and continue with the enemy model’s activation. Add Ammo and Detection Tokens to the firing Character as normal.",
+        "hidden": false,
+        "page": 43,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "weight training",
+        "id": "55d7-5568-6f83-ee11",
+        "description": "this Character has built their muscles to a point where they are able to lift more than the common person. They ignore Bulky 1, meaning that Bulky 1 items do not impose the standard -1 AP penalty. Bulky 2 items would only impose a -1 penalty instead of the standard -2 AP, and so on. They may also carry an additional weapon.",
+        "hidden": false,
+        "page": 43,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "whatever you need",
+        "id": "00ad-b3dc-2d7e-3a7c",
+        "description": "this Character is inspirational to other members of their Team. Any other friendly model within 4” of this one that is required to take a Bravery Test may reroll a single failed Bravery Test. Models with this skill gain no benefit from their own skill but may benefit from others with the same skill.",
+        "hidden": false,
+        "page": 43,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "buLky x",
+        "id": "0728-0e03-d8af-f1c0",
+        "description": "This item is cumbersome, if it is held or equipped by a Character, that Character must pay a penalty of -X Activation Points at the beginning of each Movement Phase.",
+        "hidden": false,
+        "page": 44,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "desCending Fire",
+        "id": "b2a9-fc1b-e374-93c0",
+        "description": "This weapon is deadlier the closer you are to the target when it is used. It will have multiple ranges, as well as associated DMG and Push for those ranges. Use the appropriate DMG and Push for the minimum Range at which you are firing.",
+        "hidden": false
+      },
+      {
+        "name": "expLosive x",
+        "id": "5b14-3fea-3f76-363b",
+        "description": "An item with this attribute causes damage/effect over an area. All models (including friendlies) within ‘X’ inches of the targeted space (where ‘X’ is listed in the special rules of the weapons entry) take damage/effect. If the space between the original targeted space and a model within its damage/effect range is more than half blocked by terrain, do not make a Damage roll for that secondary model. Generates ‘X’ x2 Detection Tokens.",
+        "hidden": false,
+        "page": 44,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "Loud x",
+        "id": "a840-9f75-439f-d919",
+        "description": "This ability creates +X additional Detection Tokens during a phase in which it is used (for weapons, this ability happens once per use, regardless of Firing Rate).",
+        "hidden": false,
+        "page": 44,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "siLent",
+        "id": "9514-decb-6296-e638",
+        "description": "This weapon or item does not generate Detection Tokens when used.",
+        "hidden": false,
+        "page": 44,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "singLe-use",
+        "id": "3822-62b4-1a17-db2f",
+        "description": "This weapon or piece of gear can only be used once, and then it is removed from the Character’s Roster sheet.",
+        "hidden": false,
+        "page": 44,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "sLow reLoad",
+        "id": "f2fd-b50c-8e01-663b",
+        "description": "This weapon is difficult to reload, doubling the amount of AP being required to use the Reload a Weapon action.",
+        "hidden": false,
+        "page": 44,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "thrown",
+        "id": "8401-97df-2db7-277e",
+        "description": "Thrown weapons do not have a set range, instead they rely upon the STR of the Character using it, having a maximum range in inches of 4x the Strength of the throwing Character. These items can make contact in any visible space to the throwing model that is within this range.",
+        "hidden": false,
+        "page": 44,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "extended magazine",
+        "id": "5e6b-443b-ced4-2532",
+        "description": "This item can be equipped once, meaning that it can be attached to a single Pistol, or Rifle firearm, at which point it becomes a part of that weapon and cannot be removed from it. The attached weapon gains a +2 to its Clip Size statistic.",
+        "hidden": false,
+        "page": 50,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "First aid kit",
+        "id": "68ae-52b7-4cd2-3df9",
+        "description": "A Character equipped with a First Aid Kit can use it during any Movement Phase by choosing to Handle them (3 AP), when they do so, they can heal either themselves, or a friendly model that is in Base Contact with them for 1D6 lost HP. This item is Single-Use.",
+        "hidden": false,
+        "page": 50,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "FLash bang",
+        "id": "6fcc-9a8c-b923-d1f2",
+        "description": "A Character equipped with this item may choose to use it instead of a firearm during any Shooting Phase. Flash Bangs have the Thrown ability and must target a legal spot within that range. They also have the Explosive 3 rule. From the point of contact, each model within 3” of it must succeed on a Dexterity[8] Test. On a success, they receive a single Push Token, on a failure they receive 3 Push Tokens. This item is Single-Use.",
+        "hidden": false,
+        "page": 50,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "kevLar body armor",
+        "id": "c044-83dc-c93e-15ef",
+        "description": "This is a full body suit of riot armor. The Character wearing it adds a +2 to their Constitution for determining damage against both Shooting and Melee attacks. Wearing this much armor comes with a price however, it has the Bulky 1 rule, lowers the Character’s Dexterity by 1 for the purposes of using the Dash Action, and cannot be combined with other Armor.",
+        "hidden": false,
+        "page": 50,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "Light armored vest",
+        "id": "240d-d543-4392-bcec",
+        "description": "A standard body armor before The Events, this lightweight vest offers a +1 Constitution modifier against damage from Ranged Attacks. It provides no extra protection against Melee Attacks however and cannot be combined with any other Armor.",
+        "hidden": false,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "LiQuor",
+        "id": "55c8-b54b-b563-7ecb",
+        "description": "Sometimes you just want to crack a bottle open and try to forget what is happening to the world around you. A Character equipped with this may choose to use it anytime during the game to automatically pass a Bravery Test. This item is Single-Use.",
+        "hidden": false,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "reCoiL suppressor",
+        "id": "6808-dccf-fe9f-0436",
+        "description": "This item can be mounted to any firearm with the Pistol or Rifle type that has a Firing Rate greater than 1. Once mounted to a weapon, this item cannot be removed from that weapon and is considered a part of it. When a Character uses a firearm equipped with a Recoil Suppressor, they ignore the -1 penalty for additional FR shots, but those additional shots are at a -1 penalty to their damage rating.",
+        "hidden": false,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "sCent gLands",
+        "id": "db6b-8eb0-d00d-5fcb",
+        "description": "Sometimes you will want to draw Dinosaurs to an area of the battlefield to distract or cause mayhem. The best way to do this is with scent glands. A Character equipped with this item may place five Detection Tokens (in a stack) in Base Contact with itself for 1 AP during the Movement Phase, these Tokens stay in this position even if the Character moves away from them. During the next Dino Phase, treat this stack of Detection Tokens as you would any others on the board. At the end of each Dino Phase, remove one token, with the rest staying in play until the final token is removed. This item is Single-Use",
+        "hidden": false,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "sCope",
+        "id": "ebfa-d6b1-0fcb-6c81",
+        "description": "This item may be added to any Pistol, or Rifle class firearm. Once added to a firearm, the Scope\nbecomes a part of it and cannot be removed. When a Character uses a firearm with a mounted\nScope it increases the Range of that firearm by 4”.",
+        "hidden": false,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9"
+      },
+      {
+        "name": "siLenCer",
+        "id": "f819-81d0-d2ad-3df4",
+        "description": "Silencers can be mounted to the following classes of firearms: Pistol, Rifle. They provide that\nweapon with the Silent special rule for the next game only. This item is Single-Use.",
+        "hidden": false,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9"
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "9mm",
+        "id": "f786-4aed-a434-ec4c",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 2}],
+        "profiles": [
+          {
+            "name": "9mm",
+            "id": "0b7d-fd20-1ffe-a24a",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Pistol", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "12\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "3", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "1", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "N/A", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "7", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Semi-Automatic",
+        "id": "6c8d-714d-42ba-6e27",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 3}],
+        "profiles": [
+          {
+            "name": "Semi-Automatic",
+            "id": "40c0-b1c3-ff76-0149",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Pistol", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "12\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "2", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "1", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "N/A", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "10", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Desert Eagle",
+        "id": "7f55-c7ea-6ffe-2a62",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 3}],
+        "infoLinks": [{"name": "Loud x", "id": "6556-e962-e29b-776d", "hidden": false, "targetId": "a840-9f75-439f-d919", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Desert Eagle",
+            "id": "5f06-5fff-6241-c978",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Pistol", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "12\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "4", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "1", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "1", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "6", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "$text": "Loud 1", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sawed-off/Shotgun",
+        "id": "48b6-d295-4a3a-c48b",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 3}],
+        "infoLinks": [
+          {"name": "desCending Fire", "id": "a615-b83e-43fd-f8c1", "hidden": false, "targetId": "b2a9-fc1b-e374-93c0", "type": "rule"},
+          {"name": "Loud x", "id": "fc29-a383-2a60-575e", "hidden": false, "targetId": "a840-9f75-439f-d919", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Sawed-off/Shotgun",
+            "id": "2f40-aa7d-07b2-8d7f",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Shotgun", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "4/8/12\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "5/3/1", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "1", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "3/1/0", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "2", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "$text": "Descending Fire, Loud 1", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pump-Action Shotgun",
+        "id": "b5b3-59d2-3d91-047a",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 5}],
+        "infoLinks": [
+          {"name": "desCending Fire", "id": "a4e7-eb54-5d7e-e649", "hidden": false, "targetId": "b2a9-fc1b-e374-93c0", "type": "rule"},
+          {"name": "Loud x", "id": "538b-0bcc-9d07-6c64", "hidden": false, "targetId": "a840-9f75-439f-d919", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Pump-Action Shotgun",
+            "id": "64f4-4086-d267-8726",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Shotgun", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "6/10/14\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "5/3/2", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "1", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "3/2/1", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "5", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "$text": "Descending Fire, Loud 1", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hunting rifle",
+        "id": "658b-285e-7a96-0466",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 5}],
+        "profiles": [
+          {
+            "name": "Hunting rifle",
+            "id": "8b8b-fb37-228d-80f7",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Rifle", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "24\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "3", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "1", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "1", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "6", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "M16",
+        "id": "c04b-e254-e630-a2c1",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 6}],
+        "infoLinks": [{"name": "Loud x", "id": "e1b0-e42b-e029-8876", "hidden": false, "targetId": "a840-9f75-439f-d919", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "M16",
+            "id": "2bb0-3827-77ac-7044",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Rifle", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "18\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "4", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "2", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "1", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "10", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "$text": "Loud 1", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Compound Bow",
+        "id": "fa23-1984-bd11-1238",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 3}],
+        "infoLinks": [
+          {"name": "desCending Fire", "id": "142b-cf84-d014-9ced", "hidden": false, "targetId": "b2a9-fc1b-e374-93c0", "type": "rule"},
+          {"name": "siLent", "id": "bb17-7256-1d5a-8546", "hidden": false, "targetId": "9514-decb-6296-e638", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Compound Bow",
+            "id": "4512-1d01-5558-2dd3",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Bow", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "8/16\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "3/2", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "1", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "N/A", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "2", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "$text": "Descending Fire, Silent", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Crossbow",
+        "id": "c394-48f6-edcc-2f3b",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 4}],
+        "infoLinks": [
+          {"name": "desCending Fire", "id": "61aa-74c8-3347-8cd3", "hidden": false, "targetId": "b2a9-fc1b-e374-93c0", "type": "rule"},
+          {"name": "siLent", "id": "1378-1beb-1555-b68f", "hidden": false, "targetId": "9514-decb-6296-e638", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Crossbow",
+            "id": "10a7-7358-dc62-2038",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Bow", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "10/18\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "4/3", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "1", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "N/A", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "2", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "$text": "Descending Fire, Silent", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "AK47",
+        "id": "695c-1512-5545-8948",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "profiles": [
+          {
+            "name": "AK47",
+            "id": "24b9-2825-5e3f-3b39",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Rifle", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "20\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "4", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "2", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "1", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "12", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Minigun",
+        "id": "b3c4-d4b6-0e5e-35cf",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [
+          {"name": "Loud x", "id": "7aa8-96eb-426b-d1a7", "hidden": false, "targetId": "a840-9f75-439f-d919", "type": "rule"},
+          {"name": "sLow reLoad", "id": "7239-9245-edc8-76a5", "hidden": false, "targetId": "f2fd-b50c-8e01-663b", "type": "rule"},
+          {"name": "buLky x", "id": "9456-6aec-a5ab-eb13", "hidden": false, "targetId": "0728-0e03-d8af-f1c0", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Minigun",
+            "id": "3539-02c0-1cba-643d",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Heavy", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "16\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "4", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "4", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "1", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "15", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "$text": "Loud 2, Bulky 2, SLow Reload", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sniper Rifle",
+        "id": "6172-da03-e73a-2693",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "Loud x", "id": "0ddc-9f44-b52a-b428", "hidden": false, "targetId": "a840-9f75-439f-d919", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Sniper Rifle",
+            "id": "9032-2116-7cd5-c3c1",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Heavy", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "30\"", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "4", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "1", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "2", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "5", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "$text": "Loud 1", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Grenade",
+        "id": "407d-5dc4-90db-eca8",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [
+          {"name": "thrown", "id": "ec14-3074-49d7-cc89", "hidden": false, "targetId": "8401-97df-2db7-277e", "type": "rule"},
+          {"name": "expLosive x", "id": "7d66-00e0-7936-b4ac", "hidden": false, "targetId": "5b14-3fea-3f76-363b", "type": "rule"},
+          {"name": "singLe-use", "id": "3738-c4a5-0549-bd50", "hidden": false, "targetId": "3822-62b4-1a17-db2f", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Grenade",
+            "id": "ae09-a625-ece8-e082",
+            "hidden": false,
+            "typeId": "4f9b-2f46-4ae4-00ca",
+            "typeName": "Range Weapon",
+            "characteristics": [
+              {"name": "Type", "$text": "Thrown", "typeId": "255b-ab91-2e13-6840"},
+              {"name": "Range", "$text": "*", "typeId": "3f79-d8e0-6a69-592a"},
+              {"name": "DMG", "$text": "4", "typeId": "5b51-1afc-813e-d0cc"},
+              {"name": "FR", "$text": "1", "typeId": "0723-6d4f-2abd-8f80"},
+              {"name": "Push", "$text": "3", "typeId": "4f48-5f9a-efe0-deaa"},
+              {"name": "Clip Size", "$text": "*", "typeId": "fd5c-7fde-0a07-703c"},
+              {"name": "Special Rules", "$text": "Explosive 3, Single-Use, Thrown", "typeId": "45a7-a97e-a321-7cf9"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Knife",
+        "id": "cadf-0df5-a13e-4379",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 35,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 2}],
+        "profiles": [
+          {
+            "name": "Knife",
+            "id": "e9cf-415d-e169-a101",
+            "hidden": false,
+            "typeId": "76f9-a873-d9ad-91a0",
+            "typeName": "Melee Weapon",
+            "characteristics": [
+              {"name": "Speed", "$text": "Fast", "typeId": "8329-5a6d-df7f-2ed8"},
+              {"name": "Melee Modifier", "$text": "+/- 0", "typeId": "c566-2cec-54c2-d36b"},
+              {"name": "STR Modifier", "$text": "+0", "typeId": "ed31-cf53-531e-c727"},
+              {"name": "Special Rules", "typeId": "339b-c877-eac1-0619"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Club",
+        "id": "8657-69cc-7cf5-5a83",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 35,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 2}],
+        "profiles": [
+          {
+            "name": "Club",
+            "id": "3ae7-e76d-8419-c1c6",
+            "hidden": false,
+            "typeId": "76f9-a873-d9ad-91a0",
+            "typeName": "Melee Weapon",
+            "characteristics": [
+              {"name": "Speed", "$text": "Medium", "typeId": "8329-5a6d-df7f-2ed8"},
+              {"name": "Melee Modifier", "$text": "+/- 0", "typeId": "c566-2cec-54c2-d36b"},
+              {"name": "STR Modifier", "$text": "+1", "typeId": "ed31-cf53-531e-c727"},
+              {"name": "Special Rules", "typeId": "339b-c877-eac1-0619"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Large Blade",
+        "id": "e02a-7948-8d7e-8540",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 35,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 3}],
+        "profiles": [
+          {
+            "name": "Large Blade",
+            "id": "2cf0-0f7e-9584-e862",
+            "hidden": false,
+            "typeId": "76f9-a873-d9ad-91a0",
+            "typeName": "Melee Weapon",
+            "characteristics": [
+              {"name": "Speed", "$text": "Medium", "typeId": "8329-5a6d-df7f-2ed8"},
+              {"name": "Melee Modifier", "$text": "+/- 0", "typeId": "c566-2cec-54c2-d36b"},
+              {"name": "STR Modifier", "$text": "+2", "typeId": "ed31-cf53-531e-c727"},
+              {"name": "Special Rules", "typeId": "339b-c877-eac1-0619"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Heavy Axe",
+        "id": "b2d0-a5fc-5b68-d60a",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 35,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 3}],
+        "profiles": [
+          {
+            "name": "Heavy Axe",
+            "id": "7e01-3576-a68a-a4cb",
+            "hidden": false,
+            "typeId": "76f9-a873-d9ad-91a0",
+            "typeName": "Melee Weapon",
+            "characteristics": [
+              {"name": "Speed", "$text": "Slow", "typeId": "8329-5a6d-df7f-2ed8"},
+              {"name": "Melee Modifier", "$text": "+/- 0", "typeId": "c566-2cec-54c2-d36b"},
+              {"name": "STR Modifier", "$text": "+3", "typeId": "ed31-cf53-531e-c727"},
+              {"name": "Special Rules", "typeId": "339b-c877-eac1-0619"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Extended Magazine",
+        "id": "e75e-97b1-1e60-ad20",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 50,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "extended magazine", "id": "e89e-0bb7-2508-49b3", "hidden": false, "targetId": "5e6b-443b-ced4-2532", "type": "rule"}]
+      },
+      {
+        "name": "First AID Kit",
+        "id": "6222-2e6a-cf4a-20f4",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 50,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 2}],
+        "infoLinks": [{"name": "First aid kit", "id": "4fc1-ba65-a9b5-de8b", "hidden": false, "targetId": "68ae-52b7-4cd2-3df9", "type": "rule"}]
+      },
+      {
+        "name": "Flash Bang",
+        "id": "b708-5bc4-1e88-7c80",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 50,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "FLash bang", "id": "2344-4c31-091d-adbb", "hidden": false, "targetId": "6fcc-9a8c-b923-d1f2", "type": "rule"}]
+      },
+      {
+        "name": "Kevlar Body Armor",
+        "id": "f92f-283f-6512-4477",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 50,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "kevLar body armor", "id": "bde3-eb5b-24e8-5bc6", "hidden": false, "targetId": "c044-83dc-c93e-15ef", "type": "rule"}]
+      },
+      {
+        "name": "Light Armored Vest",
+        "id": "64f8-061b-2244-037b",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "Light armored vest", "id": "40af-9d8b-ea19-9041", "hidden": false, "targetId": "240d-d543-4392-bcec", "type": "rule"}]
+      },
+      {
+        "name": "Liquor",
+        "id": "0ae5-19c9-b018-a8f4",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 2}],
+        "infoLinks": [{"name": "LiQuor", "id": "9873-7c32-8c31-5661", "hidden": false, "targetId": "55c8-b54b-b563-7ecb", "type": "rule"}]
+      },
+      {
+        "name": "Recoil Suppressor",
+        "id": "711b-5330-e1ce-0e29",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "reCoiL suppressor", "id": "adfc-3008-5029-3414", "hidden": false, "targetId": "6808-dccf-fe9f-0436", "type": "rule"}]
+      },
+      {
+        "name": "Scent Glands",
+        "id": "fe98-fba3-2cc8-5a01",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "sCent gLands", "id": "8264-7727-7219-8cbd", "hidden": false, "targetId": "db6b-8eb0-d00d-5fcb", "type": "rule"}]
+      },
+      {
+        "name": "Scope",
+        "id": "a150-3da8-63b2-df24",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 3}],
+        "infoLinks": [{"name": "sCope", "id": "3ad0-3274-5cd5-bbc6", "hidden": false, "targetId": "ebfa-d6b1-0fcb-6c81", "type": "rule"}]
+      },
+      {
+        "name": "Silencer",
+        "id": "46ce-f4e8-3c4a-1b4e",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "siLenCer", "id": "6932-9457-5ee3-d2ac", "hidden": false, "targetId": "f819-81d0-d2ad-3df4", "type": "rule"}]
+      },
+      {
+        "name": "Big Game Hunter",
+        "id": "bc48-80e0-9c6d-930a",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "0a06-a804-c483-dd21",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "big game hunter", "id": "8f98-ad0c-e3ec-973f", "hidden": false, "targetId": "1ee9-d0b8-be90-75d0", "type": "rule"}]
+      },
+      {
+        "name": "Covering Fire",
+        "id": "2353-55d5-cf23-61e9",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "d0c2-fa80-b47f-e8c4",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [
+          {
+            "name": "Covering Fire",
+            "id": "d0b3-b2b9-c9c3-c074",
+            "hidden": false,
+            "page": 102,
+            "publicationId": "beb1-426f-c267-66e9",
+            "targetId": "ff60-e46e-bc9d-c214",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Fast Loader",
+        "id": "1bd4-4199-5c8c-cc55",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "4a56-14d8-e346-73fd",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [
+          {
+            "name": "Fast Loader",
+            "id": "8346-59d8-1655-4107",
+            "hidden": false,
+            "page": 102,
+            "publicationId": "beb1-426f-c267-66e9",
+            "targetId": "b5cc-b018-d0c5-47ed",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Sniper",
+        "id": "293e-9fcf-77ac-c16e",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "18ed-2a88-cfc7-2bcd",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "sniper", "id": "502c-9926-47d1-6044", "hidden": false, "targetId": "981d-e351-94d3-f1ad", "type": "rule"}]
+      },
+      {
+        "name": "Wall of Bullets",
+        "id": "5ec3-43c4-3272-e1b1",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "0383-507a-405b-2a4b",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "waLL oF buLLets", "id": "886e-e568-0f78-583e", "hidden": false, "targetId": "eef0-920d-a6c9-540c", "type": "rule"}]
+      },
+      {
+        "name": "Convincing",
+        "id": "a897-93a9-882f-8ec9",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 103,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "3f16-af98-6f12-8d04",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "ConvinCing", "id": "8d3e-1cf0-f490-2a32", "hidden": false, "targetId": "a2a3-4d0a-9b0a-c7f5", "type": "rule"}]
+      },
+      {
+        "name": "Inspiring",
+        "id": "4665-5852-1f79-f03f",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 103,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "27f6-e250-7075-3c3c",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "inspiring", "id": "a3bb-c995-0287-b06c", "hidden": false, "targetId": "8f89-42b1-8401-90be", "type": "rule"}]
+      },
+      {
+        "name": "Lead by Example",
+        "id": "8e69-4766-d516-7986",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 103,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "e0c2-6bee-898c-55ee",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "Lead by exampLe", "id": "7eee-11bf-9724-5afc", "hidden": false, "targetId": "4a58-a574-596a-ead6", "type": "rule"}]
+      },
+      {
+        "name": "Rank and File",
+        "id": "dd9d-7549-6461-5a3c",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 103,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "1aeb-21df-1b42-35a2",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "rank and FiLe", "id": "e322-9f83-c9cb-2a7c", "hidden": false, "targetId": "1d52-9976-8525-e63b", "type": "rule"}]
+      },
+      {
+        "name": "Whatever you Need",
+        "id": "1093-a8cb-620a-1630",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 103,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "29c4-a0c1-332b-10d7",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "whatever you need", "id": "a911-cd95-678d-511d", "hidden": false, "targetId": "00ad-b3dc-2d7e-3a7c", "type": "rule"}]
+      },
+      {
+        "name": "Cheap Shot",
+        "id": "ebf5-66cc-76eb-2cde",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 103,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "eb42-29a4-ec9d-9a99",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "Cheap shot", "id": "4794-2cd7-6729-41ab", "hidden": false, "targetId": "09c3-66b1-51d3-525c", "type": "rule"}]
+      },
+      {
+        "name": "Crowd Control",
+        "id": "0c2d-bce6-99d0-e16d",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 103,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "7e26-41f7-725c-4ed5",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "Crowd ControL", "id": "b95e-9265-5ce3-18b1", "hidden": false, "targetId": "e307-0474-e6ac-38ff", "type": "rule"}]
+      },
+      {
+        "name": "Martial Artist",
+        "id": "9a9d-c32d-746d-4bef",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 103,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "1f02-0d81-6012-cfac",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "martiaL artist", "id": "d593-5b95-b9c6-b88d", "hidden": false, "targetId": "9a27-0461-2833-52db", "type": "rule"}]
+      },
+      {
+        "name": "Quickened Reflexes",
+        "id": "53b0-8a9f-e1e5-9bca",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 103,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "7cc1-2955-084e-466d",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "QuiCkened reFLexes", "id": "8982-3fae-dcff-91a8", "hidden": false, "targetId": "18a2-7286-6691-bc14", "type": "rule"}]
+      },
+      {
+        "name": "Stun",
+        "id": "5eaf-56bd-5ce2-788a",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 103,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "d7af-e8e5-9c57-176d",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "stun", "id": "cfde-b0a4-a7b4-1871", "hidden": false, "targetId": "0146-9c63-2165-b857", "type": "rule"}]
+      },
+      {
+        "name": "Agriculture",
+        "id": "7c40-783a-ccf5-17cd",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "4d94-eb95-91f3-98ef",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "agriCuLture", "id": "d9ec-8ed6-ff97-5571", "hidden": false, "targetId": "8847-324b-5030-febd", "type": "rule"}]
+      },
+      {
+        "name": "Construction",
+        "id": "d8e4-d94c-a85f-1d05",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "acb2-a298-12be-aa4c",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "ConstruCtion", "id": "f520-417d-bcf2-f4d5", "hidden": false, "targetId": "6d2b-4c98-eb4f-7a07", "type": "rule"}]
+      },
+      {
+        "name": "First Aid",
+        "id": "f2e9-818f-039e-ec75",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "6ea9-3cf1-87a3-44fd",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "First aid", "id": "ec70-1bb7-1a69-f785", "hidden": false, "targetId": "5be3-3023-0088-8f17", "type": "rule"}]
+      },
+      {
+        "name": "Researcher",
+        "id": "8f70-3524-b39a-ed18",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "ff35-ae40-c6a9-baf7",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "researCher", "id": "be1e-fcbe-bdbf-7724", "hidden": false, "targetId": "712e-9f3c-f540-090f", "type": "rule"}]
+      },
+      {
+        "name": "Resourceful",
+        "id": "173e-6150-9661-f92e",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "1f81-18a9-98ac-6f07",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "resourCeFuL", "id": "79b4-0119-ebe1-ed3f", "hidden": false, "targetId": "5faa-bfcf-06cb-47cf", "type": "rule"}]
+      },
+      {
+        "name": "Acrobatic",
+        "id": "f61f-d442-cb9b-eada",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "3c42-3a4e-21f8-1be6",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "aCrobatiC", "id": "abe4-f4d4-d10f-7a30", "hidden": false, "targetId": "1da7-4da6-0297-99b1", "type": "rule"}]
+      },
+      {
+        "name": "Bred for Conflict",
+        "id": "d1b6-4c23-f093-c402",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "424b-b08b-55da-4ec1",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "bred For ConFLiCt", "id": "7a39-6443-8feb-18f2", "hidden": false, "targetId": "eb32-3083-2cb2-e066", "type": "rule"}]
+      },
+      {
+        "name": "Sprint",
+        "id": "161a-6ecc-8b3a-5c9f",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "b4a0-b1e9-4fc1-80af",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "sprint", "id": "908a-83c8-d765-e1f8", "hidden": false, "targetId": "9f9e-473b-025d-5b8b", "type": "rule"}]
+      },
+      {
+        "name": "Stealthy",
+        "id": "002b-a98f-5e5b-e287",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "0b49-12f6-fa36-10e4",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "steaLthy", "id": "2961-2201-86e5-abee", "hidden": false, "targetId": "5694-933f-e693-ccaf", "type": "rule"}]
+      },
+      {
+        "name": "Weight Training",
+        "id": "5e41-24c8-c8b1-ced7",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "bdc5-a49c-d012-2922",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Resource Point (RP)", "typeId": "f896-ab60-0ff9-886f", "value": 0}],
+        "infoLinks": [{"name": "weight training", "id": "a542-fff5-9c8c-ff94", "hidden": false, "targetId": "55d7-5568-6f83-ee11", "type": "rule"}]
+      }
+    ],
+    "sharedSelectionEntryGroups": [
+      {
+        "name": "Mental Skill",
+        "id": "a54e-170c-40ec-e4fe",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "entryLinks": [
+          {
+            "name": "Agriculture",
+            "id": "02af-9ce6-59a3-7986",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "7c40-783a-ccf5-17cd",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Construction",
+            "id": "4877-b35c-d8b8-d345",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "d8e4-d94c-a85f-1d05",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "First Aid",
+            "id": "51b2-d382-e406-1b75",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "f2e9-818f-039e-ec75",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Researcher",
+            "id": "877e-5908-38fb-ab04",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "8f70-3524-b39a-ed18",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Resourceful",
+            "id": "4a81-9ea6-c1ba-9e08",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "173e-6150-9661-f92e",
+            "type": "selectionEntry"
+          }
+        ]
+      },
+      {
+        "name": "Physical Skill",
+        "id": "2370-2a83-411a-9079",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "entryLinks": [
+          {
+            "name": "Acrobatic",
+            "id": "3090-aa45-4894-cdd5",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "f61f-d442-cb9b-eada",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Bred for Conflict",
+            "id": "eed9-91a7-7cc9-2d76",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "d1b6-4c23-f093-c402",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Sprint",
+            "id": "99a4-de4e-75e3-01bc",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "161a-6ecc-8b3a-5c9f",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Stealthy",
+            "id": "ff4f-5453-b754-6da5",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "002b-a98f-5e5b-e287",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Weight Training",
+            "id": "2592-5cb0-318e-c261",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "5e41-24c8-c8b1-ced7",
+            "type": "selectionEntry"
+          }
+        ]
+      },
+      {
+        "name": "Firearms Skill",
+        "id": "3d21-f7ed-48e8-11f4",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "entryLinks": [
+          {
+            "name": "Big Game Hunter",
+            "id": "1510-3bed-9173-2106",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "bc48-80e0-9c6d-930a",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Covering Fire",
+            "id": "7fd0-021f-e084-78d4",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "2353-55d5-cf23-61e9",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Fast Loader",
+            "id": "8f36-34c2-7697-4188",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "1bd4-4199-5c8c-cc55",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Sniper",
+            "id": "12b4-4bda-4365-5bc1",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "293e-9fcf-77ac-c16e",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Wall of Bullets",
+            "id": "f1c0-6ec8-1277-af80",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "5ec3-43c4-3272-e1b1",
+            "type": "selectionEntry"
+          }
+        ]
+      },
+      {
+        "name": "Melee Skill",
+        "id": "28d6-4de5-552b-489f",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 102,
+        "publicationId": "beb1-426f-c267-66e9",
+        "entryLinks": [
+          {
+            "name": "Cheap Shot",
+            "id": "0ea2-1c72-79ba-7979",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "ebf5-66cc-76eb-2cde",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Crowd Control",
+            "id": "44e8-19e3-272f-b415",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "0c2d-bce6-99d0-e16d",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Martial Artist",
+            "id": "ffd0-a557-bf1b-c17b",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "9a9d-c32d-746d-4bef",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Quickened Reflexes",
+            "id": "0b42-2818-b5bc-8b21",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "53b0-8a9f-e1e5-9bca",
+            "type": "selectionEntry"
+          },
+          {"name": "Stun", "id": "027a-a5f6-b0ac-0049", "collective": false, "hidden": false, "import": true, "targetId": "5eaf-56bd-5ce2-788a", "type": "selectionEntry"}
+        ]
+      },
+      {
+        "name": "Leadership Skill",
+        "id": "e420-2351-843e-bfc4",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 103,
+        "publicationId": "beb1-426f-c267-66e9",
+        "entryLinks": [
+          {
+            "name": "Convincing",
+            "id": "dc4b-6bee-439a-cf57",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "a897-93a9-882f-8ec9",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Inspiring",
+            "id": "8f3b-c76a-7713-2c56",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "4665-5852-1f79-f03f",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Lead by Example",
+            "id": "11a0-50ea-6116-0465",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "8e69-4766-d516-7986",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Rank and File",
+            "id": "2181-4a87-3910-f5a9",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "dd9d-7549-6461-5a3c",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Whatever you Need",
+            "id": "9421-ff9c-2983-d3b6",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "1093-a8cb-620a-1630",
+            "type": "selectionEntry"
+          }
+        ]
+      },
+      {
+        "name": "Weapons (Max 3 Total)",
+        "id": "10f2-3606-13fd-b9b5",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 48,
+        "publicationId": "beb1-426f-c267-66e9",
+        "constraints": [
+          {
+            "id": "6e48-56ba-f835-3807",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 3
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Starting Equipment",
+            "id": "697e-f323-a6a0-5236",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 34,
+            "publicationId": "beb1-426f-c267-66e9",
+            "selectionEntryGroups": [
+              {
+                "name": "Range Weapon",
+                "id": "6f1f-be4b-19a8-86a0",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "page": 48,
+                "publicationId": "beb1-426f-c267-66e9",
+                "entryLinks": [
+                  {"name": "9mm", "id": "f04a-c815-1b71-75ec", "collective": false, "hidden": false, "import": true, "targetId": "f786-4aed-a434-ec4c", "type": "selectionEntry"},
+                  {
+                    "name": "Semi-Automatic",
+                    "id": "2fe9-dd27-cec7-c9b3",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "6c8d-714d-42ba-6e27",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Desert Eagle",
+                    "id": "0f2b-a25f-0ec3-4143",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "7f55-c7ea-6ffe-2a62",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Sawed-off/Shotgun",
+                    "id": "5b32-e23d-497e-65e6",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "48b6-d295-4a3a-c48b",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Pump-Action Shotgun",
+                    "id": "9002-4856-b7ec-a56f",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "b5b3-59d2-3d91-047a",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Hunting rifle",
+                    "id": "a220-2e8c-e0b3-e8bd",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "658b-285e-7a96-0466",
+                    "type": "selectionEntry"
+                  },
+                  {"name": "M16", "id": "e3a8-5517-6d5b-9d2b", "collective": false, "hidden": false, "import": true, "targetId": "c04b-e254-e630-a2c1", "type": "selectionEntry"},
+                  {
+                    "name": "Compound Bow",
+                    "id": "6e18-934f-3c7f-a4ba",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "fa23-1984-bd11-1238",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Crossbow",
+                    "id": "d273-a8cc-655e-409c",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "c394-48f6-edcc-2f3b",
+                    "type": "selectionEntry"
+                  }
+                ]
+              },
+              {
+                "name": "Melee Weapon",
+                "id": "4373-4e5f-3165-87d4",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "page": 35,
+                "publicationId": "beb1-426f-c267-66e9",
+                "entryLinks": [
+                  {"name": "Club", "id": "33cc-c951-4b2c-8721", "collective": false, "hidden": false, "import": true, "targetId": "8657-69cc-7cf5-5a83", "type": "selectionEntry"},
+                  {
+                    "name": "Knife",
+                    "id": "1b38-7335-f062-a38e",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "cadf-0df5-a13e-4379",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Large Blade",
+                    "id": "024c-9a07-816f-1d4d",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "e02a-7948-8d7e-8540",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Heavy Axe",
+                    "id": "bd59-98e4-862a-a79e",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "b2d0-a5fc-5b68-d60a",
+                    "type": "selectionEntry"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ZA - Post Game Equipment",
+            "id": "3853-0bba-9a92-6de8",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 48,
+            "publicationId": "beb1-426f-c267-66e9",
+            "selectionEntryGroups": [
+              {
+                "name": "Range Weapon",
+                "id": "4d8f-60dc-aef1-d2b3",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "entryLinks": [
+                  {"name": "AK47", "id": "7882-b0c4-b8c0-9413", "collective": false, "hidden": false, "import": true, "targetId": "695c-1512-5545-8948", "type": "selectionEntry"},
+                  {
+                    "name": "Minigun",
+                    "id": "39fb-72fa-a9a4-e091",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "b3c4-d4b6-0e5e-35cf",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Sniper Rifle",
+                    "id": "514f-b403-e05c-c9b8",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "6172-da03-e73a-2693",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Grenade",
+                    "id": "5056-f67e-bf2a-e068",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "407d-5dc4-90db-eca8",
+                    "type": "selectionEntry"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gear (no Selection limit)",
+        "id": "b701-bdd2-ff19-b596",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 51,
+        "publicationId": "beb1-426f-c267-66e9",
+        "selectionEntryGroups": [
+          {
+            "name": "Starting Equipment",
+            "id": "df95-e997-1428-9e00",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 34,
+            "publicationId": "beb1-426f-c267-66e9",
+            "selectionEntryGroups": [
+              {
+                "name": "Gear",
+                "id": "87bc-062b-5ab2-4b5a",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "entryLinks": [
+                  {
+                    "name": "Liquor",
+                    "id": "2cfb-d05f-74a3-ace4",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "0ae5-19c9-b018-a8f4",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "First AID Kit",
+                    "id": "a428-033a-8ffe-f4b1",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "6222-2e6a-cf4a-20f4",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Scope",
+                    "id": "6b43-fc91-c058-f2b0",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "a150-3da8-63b2-df24",
+                    "type": "selectionEntry"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ZA - Post Game Equipment",
+            "id": "6654-4d1a-6bce-cb1b",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 48,
+            "publicationId": "beb1-426f-c267-66e9",
+            "selectionEntryGroups": [
+              {
+                "name": "Gear",
+                "id": "5c71-a8b1-42f7-87fd",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "page": 50,
+                "publicationId": "beb1-426f-c267-66e9",
+                "entryLinks": [
+                  {
+                    "name": "Extended Magazine",
+                    "id": "c4f3-5566-7765-aad2",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "page": 50,
+                    "publicationId": "beb1-426f-c267-66e9",
+                    "targetId": "e75e-97b1-1e60-ad20",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Flash Bang",
+                    "id": "af78-f517-c940-f9a6",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "b708-5bc4-1e88-7c80",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Kevlar Body Armor",
+                    "id": "0a4d-7a82-2b3f-eb00",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "f92f-283f-6512-4477",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Light Armored Vest",
+                    "id": "1887-75e8-e215-3d07",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "64f8-061b-2244-037b",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Recoil Suppressor",
+                    "id": "4154-e580-8c0a-d6e6",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "711b-5330-e1ce-0e29",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Scent Glands",
+                    "id": "eb54-85ed-b64a-b6c4",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "fe98-fba3-2cc8-5a01",
+                    "type": "selectionEntry"
+                  },
+                  {
+                    "name": "Silencer",
+                    "id": "58b8-f552-dce6-7e83",
+                    "collective": false,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "46ce-f4e8-3c4a-1b4e",
+                    "type": "selectionEntry"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
